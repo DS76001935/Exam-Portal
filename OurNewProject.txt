@@ -1,0 +1,52 @@
+Project Name : "Exam Gateway"
+
+Technologies : 
+1) Spring  Boot - Backend  - making various rest apis
+2) MSSQL - Sql server(Database server) - database operations(DML & DDL)
+3) JPA - pivotal part of hibernate framework - diferent mappings
+4)Angular - Frontend - make components - services - including CSS, Bootstrap, AJAX, JQuery, Toastr, etc...
+5) Spring Security - (Needed)
+
+Agenda : 
+=>superadmin must be one, admin and user can be of many in size.
+=> Login credentials -> signup , login---Pure Authentication at the time of login -- if login successful->Home page otherwise redirect to itself
+=> Roles :- user, admin, superadmin
+=> signup -? user and admin-------login -? user, admin, superadmin-------- 3 home pages which have to be seperately handled
+=> SuperAdmin => manage admins, manage users (*Specific Tasks*)
+=> Admin (*Specific Tasks*) => manage Users (update) --- update the property of unique code to be shortlisted for special exams,
+	manage exams (Create | Update | Delete | View | Upload),
+	manage questions (Create | Update | Delete | View | Upload ),
+	manage Categories (Create | Update | Delete | View),
+	manage Subcategories (Create | Update | Delete | View),
+	manage external queries (Create | Delete | View )
+=> User (*Specific Tasks*) => 
+	1)can register themselves,
+	2) can authenticate themselves,
+	3) can logged out completely from our site,
+	4) can attend / fill a form of the particular exam --- submitted to answer table ---- result generated
+	5) can view the result-----join question and answer table
+	6) can view updates about upcoming exams, past exams, current exams----it means to show a list of exams from
+	different exam categories.
+	7) Before redirected to exam form page, user has to verify themselves with a code only for private exams,
+	but for public, user can directly jump to exam page.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Our Project Flow :
+
+=>We are going to make entities  : 
+								SubjectEntity
+								TopicEntity
+								ExamEntity
+								QuestionEntity
+								OptionEntity
+								AnswerEntity
+								ResultEntity
+								
+CandidateEntity
+RoleEntity
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+git remote remove branch_name
+git remote add origin remote link --- to connect with our remote repository from local one
+git push origin branch_name
+
